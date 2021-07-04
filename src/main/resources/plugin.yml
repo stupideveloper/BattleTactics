@@ -1,0 +1,10 @@
+name: BattleTacticsMobsBasic
+version: ${project.version}
+main: dev.tenfov.battletactics.MobsBasic
+api-version: 1.17
+prefix: Mobs Basic
+authors: [ 10Fov ]
+commands:
+  summonthegabe:
+    description: scary shit man
+    usage: /summonthegabe
