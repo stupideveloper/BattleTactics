@@ -9,7 +9,7 @@ public final class MobsBasic extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
-        this.getCommand("summonthegabe").setExecutor(new Spawn());
+        this.getCommand("mobspawn").setExecutor(new Spawn());
 
     }
 

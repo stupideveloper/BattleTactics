@@ -23,18 +23,29 @@ import net.minecraft.world.entity.animal.Cow;
 import net.minecraft.world.entity.player.Player;
 
 
-public class Gabe extends Zombie {
-    public Gabe(Location loc) {
+public class EnhancedZombie extends Zombie {
+    public EnhancedZombie(Location loc) {
         super(EntityType.ZOMBIE,((CraftWorld) loc.getWorld()).getHandle());
         this.setPos(loc.getX(), loc.getY(), loc.getZ());
 
-        this.setCustomName(new TextComponent(ChatColor.BOLD + "" + ChatColor.YELLOW + "Gabriel"));
+        this.setCustomName(new TextComponent(ChatColor.BOLD + "" + ChatColor.GREEN + "Enhanced Zombie"));
         this.setCustomNameVisible(true);
 
+        // Equip Items
+        ItemStack armorHead = new ItemStack(Material.CHAINMAIL_HELMET,1);
+
+        ItemStack swordHand = new ItemStack(Material.STONE_SWORD,1);
+
+        this.setItemSlot(EquipmentSlot.MAINHAND, CraftItemStack.asNMSCopy(swordHand));
+        this.setItemSlot(EquipmentSlot.OFFHAND, CraftItemStack.asNMSCopy(swordHand));
+        this.setItemSlot(EquipmentSlot.HEAD,CraftItemStack.asNMSCopy(armorHead));
+        this.setDropChance(EquipmentSlot.HEAD, 0);
 
         this.goalSelector.removeAllGoals();
-        this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 0.8D, true));
-        this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1.3D));
+        this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.3D, true));
+        this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1D));
         this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
+
+        this.setAbsorptionAmount(6);
     }
 }
