@@ -29,7 +29,7 @@ public final class MobsBasic extends JavaPlugin implements Listener {
     public void onMobDamage(EntityDamageEvent e) {
         if (e.getEntity().getPassengers().size()!=0) {
             List<Entity> passe = e.getEntity().getPassengers();
-            if (passe.get(passe.size()).getType()==EntityType.ARMOR_STAND) {
+            if (passe.get(passe.size()-1).getType()==EntityType.ARMOR_STAND) {
                 Entity ent = passe.get(passe.size()-1);
                 LivingEntity enz = (LivingEntity) e.getEntity();
                 Double hea = (enz.getHealth() + enz.getAbsorptionAmount());
