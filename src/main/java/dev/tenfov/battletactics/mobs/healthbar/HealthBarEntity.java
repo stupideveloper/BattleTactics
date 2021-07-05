@@ -32,11 +32,16 @@ public class HealthBarEntity extends ArmorStand {
     @Override 
     public void tick() {
         try {
-        this.setPos(parent.getX(), parent.getY() + 0.25, parent.getZ());
-        Float hea = (this.parentEntity.getHealth() + this.parentEntity.getAbsorptionAmount());
-        this.setCustomName(new TextComponent(hea.shortValue() + " ❤"));
-        this.setCustomNameVisible(true);
-        this.errors = 0;
+            this.setPos(parent.getX(), parent.getY() + 0.25, parent.getZ());
+            Float hea = (this.parentEntity.getHealth() + this.parentEntity.getAbsorptionAmount());
+            this.setCustomName(new TextComponent(hea.shortValue() + " ❤"));
+            this.setCustomNameVisible(true);
+            this.errors = 0;
+
+            // Temporary Fix
+            if (!parent.isAlive()) {
+                this.remove(RemovalReason.KILLED);
+            }
         } catch (NullPointerException e) {
             this.errors = this.errors + 1;
             if (this.errors > 40) {
