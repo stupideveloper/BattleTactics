@@ -48,6 +48,10 @@ public class Spawn implements CommandExecutor {
                         CrypticZombie ZombieSpawn = new CrypticZombie(player.getLocation());
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(ZombieSpawn,SpawnReason.COMMAND);
                     }
+                    else if (args[0].equalsIgnoreCase("undead_zombie")) {
+                        UndeadZombie ZombieSpawn = new UndeadZombie(player.getLocation());
+                        ((CraftWorld) player.getWorld()).getHandle().addEntity(ZombieSpawn,SpawnReason.COMMAND);
+                    }
                     else if (args[0].equalsIgnoreCase("josephi")) {
                         Josephi SkeletonSpawn = new Josephi(player.getLocation());
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(SkeletonSpawn,SpawnReason.COMMAND);

@@ -8,6 +8,7 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.craftbukkit.v1_17_R1.CraftWorld;
 import org.bukkit.craftbukkit.v1_17_R1.inventory.CraftItemStack;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
 
 
@@ -28,6 +29,7 @@ public class CrypticZombie extends Zombie {
 
         // Equip Items
         ItemStack armorHead = new ItemStack(Material.IRON_HELMET,1);
+        armorHead.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 5);
 
         ItemStack swordHand = new ItemStack(Material.IRON_SWORD,1);
 

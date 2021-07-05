@@ -17,7 +17,7 @@ public class SkeleMaster extends Skeleton {
         super(EntityType.SKELETON,((CraftWorld) loc.getWorld()).getHandle());
         this.setPos(loc.getX(), loc.getY(), loc.getZ());
 
-        this.setCustomName(new TextComponent(ChatColor.BOLD + "" + ChatColor.DARK_AQUA + "Josephi"));
+        this.setCustomName(new TextComponent(ChatColor.BOLD + "" + ChatColor.DARK_AQUA + "Skeleton Master"));
         this.setCustomNameVisible(true);
 
         this.goalSelector.removeAllGoals();
@@ -26,6 +26,6 @@ public class SkeleMaster extends Skeleton {
         this.goalSelector.addGoal(2, new RandomStrollGoal(this, 0.4D));
         this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
 
-        this.setAbsorptionAmount(14);
+        this.setAbsorptionAmount(1024);
     }
 }
