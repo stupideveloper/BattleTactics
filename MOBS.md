@@ -1,10 +1,10 @@
 ## Zombies
-- Zombie lv5
-- Enhanced Zombie lv10
-- Advanced Zombie lv15
-- Cryptic Zombie lv30
-- Offensive Zombie lv50
-- Undead lv100
+- Zombie lv5, Hp:5, Abs:0, Def:0, Atk:3.
+- Enhanced Zombie lv10, Hp:10, Abs:0, Def:5, Atk:5.
+- Advanced Zombie lv15, Hp:10, Abs:5, Def:5, Atk:5.
+- Cryptic Zombie lv30, Hp:20, Abs:0, Def:10, Atk:7.
+- Offensive Zombie lv50, Hp:25, Abs:10, Def:10, Atk:7.
+- Undead lv100, Hp:30, Abs:20, Def:0, Atk:8
 
 ## Spiders
 - Spider lvl8, Hp:8, Abs:4, Def:5, Atk:2.
