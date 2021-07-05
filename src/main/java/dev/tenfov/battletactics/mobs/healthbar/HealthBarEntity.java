@@ -13,6 +13,8 @@ public class HealthBarEntity extends ArmorStand {
 
     private Entity parent;
 
+    private int errors;
+
     private LivingEntity parentEntity;
 
     public HealthBarEntity(Location loc, Entity parent) {
@@ -21,19 +23,25 @@ public class HealthBarEntity extends ArmorStand {
         this.setInvulnerable(true);
         this.setInvisible(true);
         this.parent = parent;
+        if (parent instanceof LivingEntity) {
+        this.parentEntity = (LivingEntity) parent;
+        } else {
+            this.remove(RemovalReason.DISCARDED);
+        }
     }
     @Override 
     public void tick() {
         try {
-        this.setPos(parent.getX(), parent.getY() + 0.025, parent.getZ());
-        Float hea = (parentEntity.getHealth() + parentEntity.getAbsorptionAmount());
+        this.setPos(parent.getX(), parent.getY() + 0.25, parent.getZ());
+        Float hea = (this.parentEntity.getHealth() + this.parentEntity.getAbsorptionAmount());
         this.setCustomName(new TextComponent(hea.shortValue() + " ❤"));
         this.setCustomNameVisible(true);
-        if (!this.parent.isAlive()) {
-            this.remove(RemovalReason.KILLED);
-        }
+        this.errors = 0;
         } catch (NullPointerException e) {
-            
+            this.errors = this.errors + 1;
+            if (this.errors > 40) {
+                this.remove(RemovalReason.KILLED);
+            }
         }
     }
     
