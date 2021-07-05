@@ -29,7 +29,7 @@ public class CrypticZombie extends Zombie {
 
         // Equip Items
         ItemStack armorHead = new ItemStack(Material.IRON_HELMET,1);
-        armorHead.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 5);
+        armorHead.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
 
         ItemStack swordHand = new ItemStack(Material.IRON_SWORD,1);
 

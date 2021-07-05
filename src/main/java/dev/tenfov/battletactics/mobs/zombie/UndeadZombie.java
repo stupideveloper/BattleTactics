@@ -24,19 +24,19 @@ public class UndeadZombie extends Zombie {
 
         // Equip Items
         ItemStack armorHead = new ItemStack(Material.IRON_HELMET,1);
-        armorHead.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 10);
+        armorHead.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
 
         ItemStack armorChest = new ItemStack(Material.CHAINMAIL_CHESTPLATE,1);
-        armorChest.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 10);
+        armorChest.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
 
         ItemStack armorLegs = new ItemStack(Material.IRON_LEGGINGS,1);
-        armorLegs.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 10);
+        armorLegs.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
 
         ItemStack armorBoots = new ItemStack(Material.IRON_BOOTS,1);
-        armorBoots.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 10);
+        armorBoots.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
 
         ItemStack swordHand = new ItemStack(Material.IRON_SWORD,1);
-        swordHand.addEnchantment(Enchantment.DAMAGE_ALL, 10);
+        swordHand.addEnchantment(Enchantment.DAMAGE_ALL, 5);
 
         this.setItemSlot(EquipmentSlot.MAINHAND, CraftItemStack.asNMSCopy(swordHand));
         this.setItemSlot(EquipmentSlot.HEAD,CraftItemStack.asNMSCopy(armorHead));
