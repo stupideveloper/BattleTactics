@@ -19,8 +19,6 @@ public class Spawn implements CommandExecutor {
                 return false;
             }
             Player player = (Player) sender;
-            HealthBarEntity bar = new HealthBarEntity(player.getLocation());
-            ((CraftWorld) player.getWorld()).getHandle().addEntity(bar,SpawnReason.COMMAND);
             int times = 1;
             if (args.length == 2) {
                 try {
@@ -37,6 +35,8 @@ public class Spawn implements CommandExecutor {
             if ((args.length == 2)) {
                 player.sendMessage(ChatColor.YELLOW + "Summoning " + args[1] + args[0]);
                 for (int i = 0; i < times; i++) {
+                    HealthBarEntity bar = new HealthBarEntity(player.getLocation());
+                    ((CraftWorld) player.getWorld()).getHandle().addEntity(bar,SpawnReason.COMMAND);
                     if (args[0].equalsIgnoreCase("gabe")) {
                         Gabe ZombieSpawn = new Gabe(player.getLocation());
                         bar.startRiding(ZombieSpawn);
