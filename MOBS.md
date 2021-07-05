@@ -1,7 +1,7 @@
 ## Zombies
 - Zombie lv5
-- Advanced Zombie lv10
-- Enhanced Zombie lv15
+- Enhanced Zombie lv10
+- Advanced Zombie lv15
 - Cryptic Zombie lv30
 - Offensive Zombie lv50
 - Undead lv100
