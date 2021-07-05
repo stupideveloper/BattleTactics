@@ -27,6 +27,8 @@ public class Spawn implements CommandExecutor {
             }
             if ((args.length < 3)) {
                 player.sendMessage(ChatColor.YELLOW + "Summoning " + args[0]);
+            if ((args.length == 2)) {
+                player.sendMessage(ChatColor.YELLOW + "Summoning " + args[1] + args[0]);
                 for (int i = 0; i < times; i++) {
                     if (args[0].equalsIgnoreCase("gabe")) {
                         Gabe ZombieSpawn = new Gabe(player.getLocation());
@@ -68,4 +70,6 @@ public class Spawn implements CommandExecutor {
         }
         return true;
     }
+    return true;
+}
 }
