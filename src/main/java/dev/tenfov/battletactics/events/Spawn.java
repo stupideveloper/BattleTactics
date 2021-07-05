@@ -17,6 +17,7 @@ public class Spawn implements CommandExecutor {
         if (sender instanceof Player) {
             Player player = (Player) sender;
             HealthBarEntity bar = new HealthBarEntity(player.getLocation());
+            ((CraftWorld) player.getWorld()).getHandle().addEntity(bar,SpawnReason.COMMAND);
             int times = 1;
             if (args.length == 2) {
                 try {
