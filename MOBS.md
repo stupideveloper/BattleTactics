@@ -49,7 +49,7 @@
 - Ultimate Packmaster
 - Werewolf
 
-## Enderman
+## Ultimate Enderman
 - Ultimate Enderman
 - Ultimate Zealot
 - Ultimate Voidgloom
