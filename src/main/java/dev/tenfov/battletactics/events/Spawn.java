@@ -35,44 +35,58 @@ public class Spawn implements CommandExecutor {
             if ((args.length == 2)) {
                 player.sendMessage(ChatColor.YELLOW + "Summoning " + args[1] + args[0]);
                 for (int i = 0; i < times; i++) {
-                    HealthBarEntity bar = new HealthBarEntity(player.getLocation());
-                    ((CraftWorld) player.getWorld()).getHandle().addEntity(bar,SpawnReason.COMMAND);
                     if (args[0].equalsIgnoreCase("gabe")) {
                         Gabe ZombieSpawn = new Gabe(player.getLocation());
+                        HealthBarEntity bar = new HealthBarEntity(player.getLocation(),ZombieSpawn);
+                        ((CraftWorld) player.getWorld()).getHandle().addEntity(bar,SpawnReason.COMMAND);
                         bar.startRiding(ZombieSpawn);
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(ZombieSpawn,SpawnReason.COMMAND);
                     }
                     else if (args[0].equalsIgnoreCase("zombie")) {
                         BasicZombie ZombieSpawn = new BasicZombie(player.getLocation());
+                        HealthBarEntity bar = new HealthBarEntity(player.getLocation(),ZombieSpawn);
+                        ((CraftWorld) player.getWorld()).getHandle().addEntity(bar,SpawnReason.COMMAND);
                         bar.startRiding(ZombieSpawn);
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(ZombieSpawn,SpawnReason.COMMAND);
                     }
                     else if (args[0].equalsIgnoreCase("advanced_zombie")) {
                         AdvancedZombie ZombieSpawn = new AdvancedZombie(player.getLocation());
+                        HealthBarEntity bar = new HealthBarEntity(player.getLocation(),ZombieSpawn);
+                        ((CraftWorld) player.getWorld()).getHandle().addEntity(bar,SpawnReason.COMMAND);
                         bar.startRiding(ZombieSpawn);
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(ZombieSpawn,SpawnReason.COMMAND);
                     }
                     else if (args[0].equalsIgnoreCase("enhanced_zombie")) {
                         EnhancedZombie ZombieSpawn = new EnhancedZombie(player.getLocation());
+                        HealthBarEntity bar = new HealthBarEntity(player.getLocation(),ZombieSpawn);
+                        ((CraftWorld) player.getWorld()).getHandle().addEntity(bar,SpawnReason.COMMAND);
                         bar.startRiding(ZombieSpawn);
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(ZombieSpawn,SpawnReason.COMMAND);
                     }
                     else if (args[0].equalsIgnoreCase("cryptic_zombie")) {
                         CrypticZombie ZombieSpawn = new CrypticZombie(player.getLocation());
+                        HealthBarEntity bar = new HealthBarEntity(player.getLocation(),ZombieSpawn);
+                        ((CraftWorld) player.getWorld()).getHandle().addEntity(bar,SpawnReason.COMMAND);
                         bar.startRiding(ZombieSpawn);
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(ZombieSpawn,SpawnReason.COMMAND);
                     }
                     else if (args[0].equalsIgnoreCase("undead_zombie")) {
                         UndeadZombie ZombieSpawn = new UndeadZombie(player.getLocation());
+                        HealthBarEntity bar = new HealthBarEntity(player.getLocation(),ZombieSpawn);
+                        ((CraftWorld) player.getWorld()).getHandle().addEntity(bar,SpawnReason.COMMAND);
                         bar.startRiding(ZombieSpawn);
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(ZombieSpawn,SpawnReason.COMMAND);
                     }
                     else if (args[0].equalsIgnoreCase("josephi")) {
                         Josephi SkeletonSpawn = new Josephi(player.getLocation());
+                        HealthBarEntity bar = new HealthBarEntity(player.getLocation(),SkeletonSpawn);
+                        ((CraftWorld) player.getWorld()).getHandle().addEntity(bar,SpawnReason.COMMAND);
                         bar.startRiding(SkeletonSpawn);
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(SkeletonSpawn,SpawnReason.COMMAND);
                     } else if (args[0].equalsIgnoreCase("skeleton_master")) {
                         SkeleMaster SkeletonSpawn = new SkeleMaster(player.getLocation());
+                        HealthBarEntity bar = new HealthBarEntity(player.getLocation(),SkeletonSpawn);
+                        ((CraftWorld) player.getWorld()).getHandle().addEntity(bar,SpawnReason.COMMAND);
                         bar.startRiding(SkeletonSpawn);
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(SkeletonSpawn,SpawnReason.COMMAND);
                     } else {
