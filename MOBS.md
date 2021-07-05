@@ -20,38 +20,41 @@
 - Packmaster lvl200, Hp:96, Abs:0, Def:300, Atk:12.
 
 ## Enderman
-- Enderman lvl55, Hp:50, Abs:20, Def:50, Atk:10
+- Enderman lvl55, Hp:50, Abs:20, Def:50, Atk:10.
 - Zealot lvl122, Hp:100, Abs:40, Def:100, Atk:20.
-- Voidgloom lvl165
-- Taller lvl275
+- Voidgloom lvl165, Hp:200, Abs:80, Def:200, Atk:40.
+- Taller lvl275, Hp:400, Abs:160, Def:400, Atk:80.
 
 ## Ultimate Zombies
-- Ultimate Zombie
-- Ultimate Advanced Zombie
-- Ultimate Enhanced Zombie
-- Ultimate Cryptic Zombie
-- Ultimate Offensive Zombie
-- Ultimate Undead
-- The Revenant
+- Ultimate Zombie lvl300
+- Ultimate Advanced Zombie lvl320
+- Ultimate Enhanced Zombie lvl340
+- Ultimate Cryptic Zombie lvl360
+- Ultimate Offensive Zombie lvl380
+- Ultimate Undead lvl400
+- The Revenant lvl800
 
 ## Ultimate Spiders
-- Ultimate Spider
-- Ultimate Cave Spider
-- Ultimate Skullsplitter
-- Ultimate Tarantula
-- Ultimate Queen
-- Spider King
+- Ultimate Spider lvl420
+- Ultimate Cave Spider lvl440
+- Ultimate Skullsplitter lvl460
+- Ultimate Tarantula lvl480
+- Ultimate Queen lvl500
+- Spider King lvl1000
 
 ## Ultimate Wolves
-- Ultimate Wolf
-- Ultimate Pack Member
-- Ultimate Pack Lieutenant
-- Ultimate Packmaster
-- Werewolf
+- Ultimate Wolf lvl520
+- Ultimate Pack Member lvl540
+- Ultimate Pack Lieutenant lvl560
+- Ultimate Packmaster lvl600
+- Werewolf lvl1200
 
 ## Ultimate Enderman
-- Ultimate Enderman
-- Ultimate Zealot
-- Ultimate Voidgloom
-- Ultimate Taller
-- Storm Dragon, Hp:10k, Abs:0, Def:0, Atk:30
+- Ultimate Enderman lvl1000
+- Ultimate Zealot lvl2000
+- Ultimate Voidgloom lvl3000
+- Ultimate Taller lvl5000
+- Storm Dragon lvl10k, Hp:10k, Abs:0, Def:0, Atk:30
+
+## Finale
+- Delirious
