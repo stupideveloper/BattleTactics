@@ -3,7 +3,7 @@
 - Advanced Zombie lv10
 - Enhanced Zombie lv15
 - Cryptic Zombie lv30
-- Offencive Zombie lv50
+- Offensive Zombie lv50
 - Undead lv100
 
 ## Spiders
@@ -24,3 +24,34 @@
 - Zealot lvl122
 - Voidgloom lvl165
 - Taller lvl275
+
+## Ultimate Zombies
+- Ultimate Zombie
+- Ultimate Advanced Zombie
+- Ultimate Enhanced Zombie
+- Ultimate Cryptic Zombie
+- Ultimate Offensive Zombie
+- Ultimate Undead
+- The Revenant
+
+## Ultimate Spiders
+- Ultimate Spider
+- Ultimate Cave Spider
+- Ultimate Skullsplitter
+- Ultimate Tarantula
+- Ultimate Queen
+- Spider King
+
+## Ultimate Wolves
+- Ultimate Wolf
+- Ultimate Pack Member
+- Ultimate Pack Lieutenant
+- Ultimate Packmaster
+- Werewolf
+
+## Enderman
+- Ultimate Enderman
+- Ultimate Zealot
+- Ultimate Voidgloom
+- Ultimate Taller
+- Storm Dragon
