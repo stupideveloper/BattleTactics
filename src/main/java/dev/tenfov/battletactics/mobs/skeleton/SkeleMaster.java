@@ -26,6 +26,6 @@ public class SkeleMaster extends Skeleton {
         this.goalSelector.addGoal(2, new RandomStrollGoal(this, 0.4D));
         this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
 
-        this.setAbsorptionAmount(1024);
+        this.setAbsorptionAmount(50);
     }
 }

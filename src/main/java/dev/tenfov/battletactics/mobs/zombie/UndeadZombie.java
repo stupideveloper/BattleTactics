@@ -54,6 +54,6 @@ public class UndeadZombie extends Zombie {
         this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1.3D));
         this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
 
-        this.setAbsorptionAmount(92);
+        this.setAbsorptionAmount(40);
     }
 }
