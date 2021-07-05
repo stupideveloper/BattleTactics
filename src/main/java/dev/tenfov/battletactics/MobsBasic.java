@@ -34,6 +34,7 @@ public final class MobsBasic extends JavaPlugin implements Listener {
                 LivingEntity enz = (LivingEntity) e.getEntity();
                 Double hea = (enz.getHealth() + enz.getAbsorptionAmount());
                 ent.setCustomName(hea + " ❤️️");
+                ent.setCustomNameVisible(true);
             }
         }
     }
