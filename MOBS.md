@@ -1,10 +1,10 @@
 ## Zombies
-- Zombie lv5
-- Enhanced Zombie lv10
-- Advanced Zombie lv15
-- Cryptic Zombie lv30
-- Offensive Zombie lv50
-- Undead lv100
+- Zombie lvl5, Hp:5, Abs:0, Def:0, Atk:3.
+- Enhanced Zombie lvl10, Hp:10, Abs:0, Def:5, Atk:5.
+- Advanced Zombie lvl15, Hp:10, Abs:5, Def:5, Atk:5.
+- Cryptic Zombie lvl30, Hp:20, Abs:0, Def:10, Atk:7.
+- Offensive Zombie lvl50, Hp:25, Abs:10, Def:10, Atk:7.
+- Undead lvl100, Hp:30, Abs:20, Def:0, Atk:8
 
 ## Spiders
 - Spider lvl8, Hp:8, Abs:4, Def:5, Atk:2.
@@ -20,8 +20,8 @@
 - Packmaster lvl200, Hp:96, Abs:0, Def:300, Atk:12.
 
 ## Enderman
-- Enderman lvl55
-- Zealot lvl122
+- Enderman lvl55, Hp:50, Abs:20, Def:50, Atk:10
+- Zealot lvl122, Hp:100, Abs:40, Def:100, Atk:20.
 - Voidgloom lvl165
 - Taller lvl275
 
