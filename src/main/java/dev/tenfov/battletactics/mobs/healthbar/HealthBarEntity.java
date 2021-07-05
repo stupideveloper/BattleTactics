@@ -24,12 +24,14 @@ public class HealthBarEntity extends ArmorStand {
     }
     @Override 
     public void tick() {
+        if (this.parent != null) {
         this.setPos(parent.getX(), parent.getY() + 0.025, parent.getZ());
         Float hea = (parentEntity.getHealth() + parentEntity.getAbsorptionAmount());
         this.setCustomName(new TextComponent(hea.shortValue() + " ❤"));
         this.setCustomNameVisible(true);
         if (!this.parent.isAlive()) {
             this.remove(RemovalReason.KILLED);
+        }
         }
     }
     
