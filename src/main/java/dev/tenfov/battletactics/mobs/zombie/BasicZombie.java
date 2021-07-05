@@ -1,4 +1,5 @@
-package dev.tenfov.battletactics.mobs;
+package dev.tenfov.battletactics.mobs.zombie;
+
 
 import net.minecraft.world.entity.ai.goal.*;
 import org.bukkit.ChatColor;
@@ -16,22 +17,23 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.monster.Zombie;
 
 
-public class AdvancedZombie extends Zombie {
-    public AdvancedZombie(Location loc) {
+
+public class BasicZombie extends Zombie {
+    public BasicZombie(Location loc) {
         super(EntityType.ZOMBIE,((CraftWorld) loc.getWorld()).getHandle());
         this.setPos(loc.getX(), loc.getY(), loc.getZ());
 
-        this.setCustomName(new TextComponent(ChatColor.BOLD + "" + ChatColor.RED + "Advanced Zombie"));
+        this.setCustomName(new TextComponent(ChatColor.BOLD + "" + ChatColor.BLUE + "Zombie"));
         this.setCustomNameVisible(true);
 
         // Equip Items
         ItemStack armorHead = new ItemStack(Material.LEATHER_HELMET,1);
         LeatherArmorMeta armorHeadMeta = (LeatherArmorMeta) armorHead.getItemMeta();
         armorHeadMeta.setUnbreakable(true);
-        armorHeadMeta.setColor(Color.fromRGB(255,13,13));
+        armorHeadMeta.setColor(Color.fromRGB(0,51,141));
         armorHead.setItemMeta(armorHeadMeta);
 
-        ItemStack swordHand = new ItemStack(Material.STONE_SWORD,1);
+        ItemStack swordHand = new ItemStack(Material.WOODEN_SWORD,1);
 
         this.setItemSlot(EquipmentSlot.MAINHAND, CraftItemStack.asNMSCopy(swordHand));
         this.setItemSlot(EquipmentSlot.HEAD,CraftItemStack.asNMSCopy(armorHead));
@@ -42,6 +44,6 @@ public class AdvancedZombie extends Zombie {
         this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1D));
         this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
 
-        this.setAbsorptionAmount(4);
+        this.setAbsorptionAmount(3);
     }
 }

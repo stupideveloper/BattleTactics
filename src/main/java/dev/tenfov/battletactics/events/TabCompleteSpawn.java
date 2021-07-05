@@ -11,7 +11,7 @@ import org.bukkit.command.TabCompleter;
 import org.bukkit.util.StringUtil;
 
 public class TabCompleteSpawn implements TabCompleter {
-    public static final String[] mobs = {"gabe","zombie","advancedzombie","enhancedzombie","crypticzombie"};
+    public static final String[] mobs = {"gabe","zombie","advancedzombie","enhancedzombie","crypticzombie", "josephi"};
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
         if (args.length == 1 || args.length == 0) {

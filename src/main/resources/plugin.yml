@@ -1,4 +1,4 @@
-name: BattleTacticsMobsBasic
+name: BTMobs
 version: ${project.version}
 main: dev.tenfov.battletactics.MobsBasic
 api-version: 1.17
