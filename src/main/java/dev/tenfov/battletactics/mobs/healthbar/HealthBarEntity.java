@@ -12,6 +12,7 @@ public class HealthBarEntity extends ArmorStand {
         super(EntityType.ARMOR_STAND, ((CraftWorld) loc.getWorld()).getHandle());
         this.setPos(loc.getX(), loc.getY(), loc.getZ());
         this.setInvulnerable(true);
+        this.setInvisible(true);
     }
     
 }

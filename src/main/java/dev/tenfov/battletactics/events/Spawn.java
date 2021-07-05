@@ -15,6 +15,9 @@ public class Spawn implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (sender instanceof Player) {
+            if (args.length == 0) {
+                return false;
+            }
             Player player = (Player) sender;
             HealthBarEntity bar = new HealthBarEntity(player.getLocation());
             ((CraftWorld) player.getWorld()).getHandle().addEntity(bar,SpawnReason.COMMAND);
