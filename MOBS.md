@@ -8,10 +8,10 @@
 
 ## Spiders
 - Spider lvl8, Hp: 8, Abs: 4, Def: 5, Atk: 2.
-- Cave Spider lvl11
-- Skull Spliter lvl18
-- Tarantula lvl40
-- The Queen lvl125
+- Cave Spider lvl11, Hp: 12, Abs: 12, Def: 24, Atk: 4. (Poison 1)
+- Skull Spliter lvl18, Hp: 24, Abs: 6, Def: 24, Atk: 6 (Poison 2)
+- Tarantula lvl40, Hp: 110, Abs: 12, Def: 22, Atk: 6 (Poison 3 10% chance)
+- The Queen lvl125, 
 
 ## Wolves
 - Wolf lvl20
