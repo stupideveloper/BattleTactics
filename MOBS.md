@@ -20,7 +20,7 @@
 - Packmaster lvl200
 
 ## Enderman
-Enderman lvl55
-Zealot lvl122
-Voidgloom lvl165
-Taller lvl275
+- Enderman lvl55
+- Zealot lvl122
+- Voidgloom lvl165
+- Taller lvl275
