@@ -1,6 +1,6 @@
 package dev.tenfov.battletactics.events;
 
-import dev.tenfov.battletactics.mobs.skeleton.Josephi;
+import dev.tenfov.battletactics.mobs.skeleton.*;
 import dev.tenfov.battletactics.mobs.zombie.*;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -22,8 +22,10 @@ public class Spawn implements CommandExecutor {
                 } catch (NumberFormatException e) {
                     times = 1;
                 }
+            } else if (args.length == 1) {
+                times = 1;
             }
-            if ((args.length == 2)) {
+            if ((args.length < 3)) {
                 player.sendMessage(ChatColor.YELLOW + "Summoning " + args[0]);
                 for (int i = 0; i < times; i++) {
                     if (args[0].equalsIgnoreCase("gabe")) {
@@ -34,20 +36,23 @@ public class Spawn implements CommandExecutor {
                         BasicZombie ZombieSpawn = new BasicZombie(player.getLocation());
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(ZombieSpawn,SpawnReason.COMMAND);
                     }
-                    else if (args[0].equalsIgnoreCase("advancedzombie")) {
+                    else if (args[0].equalsIgnoreCase("advanced_zombie")) {
                         AdvancedZombie ZombieSpawn = new AdvancedZombie(player.getLocation());
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(ZombieSpawn,SpawnReason.COMMAND);
                     }
-                    else if (args[0].equalsIgnoreCase("enhancedzombie")) {
+                    else if (args[0].equalsIgnoreCase("enhanced_zombie")) {
                         EnhancedZombie ZombieSpawn = new EnhancedZombie(player.getLocation());
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(ZombieSpawn,SpawnReason.COMMAND);
                     }
-                    else if (args[0].equalsIgnoreCase("crypticzombie")) {
+                    else if (args[0].equalsIgnoreCase("cryptic_zombie")) {
                         CrypticZombie ZombieSpawn = new CrypticZombie(player.getLocation());
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(ZombieSpawn,SpawnReason.COMMAND);
                     }
                     else if (args[0].equalsIgnoreCase("josephi")) {
                         Josephi SkeletonSpawn = new Josephi(player.getLocation());
+                        ((CraftWorld) player.getWorld()).getHandle().addEntity(SkeletonSpawn,SpawnReason.COMMAND);
+                    } else if (args[0].equalsIgnoreCase("skeleton_master")) {
+                        SkeleMaster SkeletonSpawn = new SkeleMaster(player.getLocation());
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(SkeletonSpawn,SpawnReason.COMMAND);
                     } else {
                         player.sendMessage(ChatColor.YELLOW + "Mob does not exist.");
