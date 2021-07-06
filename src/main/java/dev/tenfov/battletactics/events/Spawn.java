@@ -36,6 +36,7 @@ public class Spawn implements CommandExecutor {
             if ((args.length == 2)) {
                 player.sendMessage(ChatColor.YELLOW + "Summoning " + args[1] + args[0]);
                 Boolean shouldParticle = false;
+                Boolean hasSpawnedOne = false;
                 for (int i = 0; i < times; i++) {
                     if (args[0].equalsIgnoreCase("gabe")) {
                         shouldParticle = true;
@@ -98,13 +99,16 @@ public class Spawn implements CommandExecutor {
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(bar,SpawnReason.COMMAND);
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(SkeletonSpawn,SpawnReason.COMMAND);
                     } else if (args[0].equalsIgnoreCase("sphere_test")) {
+                        if (!hasSpawnedOne) {
+                        hasSpawnedOne = true;
                         new sphere(player.getLocation(),(double) 1);
+                        }
                     } else {
                         player.sendMessage(ChatColor.YELLOW + "Mob does not exist.");
                     }
-                    if (shouldParticle) {
-                        new sphere(player.getLocation(),(double) 1, (double) 2, (double) 1);
-                    }
+                }
+                if (shouldParticle) {
+                    new sphere(player.getLocation(),(double) 1, (double) 2, (double) 1);
                 }
             } else {
                 player.sendMessage(ChatColor.YELLOW + "Please include a number of mobs to spawn. /mobspawn <mob> <amount>");
