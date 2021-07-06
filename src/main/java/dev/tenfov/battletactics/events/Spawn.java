@@ -1,5 +1,6 @@
 package dev.tenfov.battletactics.events;
 
+import dev.tenfov.battletactics.sphere;
 import dev.tenfov.battletactics.mobs.healthbar.HealthBarEntity;
 import dev.tenfov.battletactics.mobs.skeleton.*;
 import dev.tenfov.battletactics.mobs.zombie.*;
@@ -81,6 +82,8 @@ public class Spawn implements CommandExecutor {
                         HealthBarEntity bar = new HealthBarEntity(player.getLocation(),SkeletonSpawn);
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(bar,SpawnReason.COMMAND);
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(SkeletonSpawn,SpawnReason.COMMAND);
+                    } else if (args[0].equalsIgnoreCase("sphere_test")) {
+                        new sphere(player.getLocation(),(double) 4);
                     } else {
                         player.sendMessage(ChatColor.YELLOW + "Mob does not exist.");
                     }
