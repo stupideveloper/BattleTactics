@@ -35,15 +35,46 @@ public class Spawn implements CommandExecutor {
             }
             if ((args.length == 2)) {
                 player.sendMessage(ChatColor.YELLOW + "Summoning " + args[1] + args[0]);
+                Boolean shouldParticle = false;
                 for (int i = 0; i < times; i++) {
                     if (args[0].equalsIgnoreCase("gabe")) {
+                        shouldParticle = true;
                         Gabe ZombieSpawn = new Gabe(player.getLocation());
                         HealthBarEntity bar = new HealthBarEntity(player.getLocation(),ZombieSpawn);
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(bar,SpawnReason.COMMAND);
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(ZombieSpawn,SpawnReason.COMMAND);
                     }
                     else if (args[0].equalsIgnoreCase("zombie")) {
+                        shouldParticle = true;
                         BasicZombie ZombieSpawn = new BasicZombie(player.getLocation());
+                        HealthBarEntity bar = new HealthBarEntity(player.getLocation(),ZombieSpawn);
+                        ((CraftWorld) player.getWorld()).getHandle().addEntity(bar,SpawnReason.COMMAND);
+                        ((CraftWorld) player.getWorld()).getHandle().addEntity(ZombieSpawn,SpawnReason.COMMAND);
+                    }
+                    else if (args[0].equalsIgnoreCase("advanced_zombie")) {
+                        shouldParticle = true;
+                        AdvancedZombie ZombieSpawn = new AdvancedZombie(player.getLocation());
+                        HealthBarEntity bar = new HealthBarEntity(player.getLocation(),ZombieSpawn);
+                        ((CraftWorld) player.getWorld()).getHandle().addEntity(bar,SpawnReason.COMMAND);
+                        ((CraftWorld) player.getWorld()).getHandle().addEntity(ZombieSpawn,SpawnReason.COMMAND);
+                    }
+                    else if (args[0].equalsIgnoreCase("enhanced_zombie")) {
+                        shouldParticle = true;
+                        EnhancedZombie ZombieSpawn = new EnhancedZombie(player.getLocation());
+                        HealthBarEntity bar = new HealthBarEntity(player.getLocation(),ZombieSpawn);
+                        ((CraftWorld) player.getWorld()).getHandle().addEntity(bar,SpawnReason.COMMAND);
+                        ((CraftWorld) player.getWorld()).getHandle().addEntity(ZombieSpawn,SpawnReason.COMMAND);
+                    }
+                    else if (args[0].equalsIgnoreCase("cryptic_zombie")) {
+                        shouldParticle = true;
+                        CrypticZombie ZombieSpawn = new CrypticZombie(player.getLocation());
+                        HealthBarEntity bar = new HealthBarEntity(player.getLocation(),ZombieSpawn);
+                        ((CraftWorld) player.getWorld()).getHandle().addEntity(bar,SpawnReason.COMMAND);
+                        ((CraftWorld) player.getWorld()).getHandle().addEntity(ZombieSpawn,SpawnReason.COMMAND);
+                    }
+                    else if (args[0].equalsIgnoreCase("undead_zombie")) {
+                        shouldParticle = true;
+                        UndeadZombie ZombieSpawn = new UndeadZombie(player.getLocation());
                         HealthBarEntity bar = new HealthBarEntity(player.getLocation(),ZombieSpawn);
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(bar,SpawnReason.COMMAND);
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(ZombieSpawn,SpawnReason.COMMAND);
@@ -54,36 +85,14 @@ public class Spawn implements CommandExecutor {
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(bar,SpawnReason.COMMAND);
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(ZombieSpawn,SpawnReason.COMMAND);
                     }
-                    else if (args[0].equalsIgnoreCase("advanced_zombie")) {
-                        AdvancedZombie ZombieSpawn = new AdvancedZombie(player.getLocation());
-                        HealthBarEntity bar = new HealthBarEntity(player.getLocation(),ZombieSpawn);
-                        ((CraftWorld) player.getWorld()).getHandle().addEntity(bar,SpawnReason.COMMAND);
-                        ((CraftWorld) player.getWorld()).getHandle().addEntity(ZombieSpawn,SpawnReason.COMMAND);
-                    }
-                    else if (args[0].equalsIgnoreCase("enhanced_zombie")) {
-                        EnhancedZombie ZombieSpawn = new EnhancedZombie(player.getLocation());
-                        HealthBarEntity bar = new HealthBarEntity(player.getLocation(),ZombieSpawn);
-                        ((CraftWorld) player.getWorld()).getHandle().addEntity(bar,SpawnReason.COMMAND);
-                        ((CraftWorld) player.getWorld()).getHandle().addEntity(ZombieSpawn,SpawnReason.COMMAND);
-                    }
-                    else if (args[0].equalsIgnoreCase("cryptic_zombie")) {
-                        CrypticZombie ZombieSpawn = new CrypticZombie(player.getLocation());
-                        HealthBarEntity bar = new HealthBarEntity(player.getLocation(),ZombieSpawn);
-                        ((CraftWorld) player.getWorld()).getHandle().addEntity(bar,SpawnReason.COMMAND);
-                        ((CraftWorld) player.getWorld()).getHandle().addEntity(ZombieSpawn,SpawnReason.COMMAND);
-                    }
-                    else if (args[0].equalsIgnoreCase("undead_zombie")) {
-                        UndeadZombie ZombieSpawn = new UndeadZombie(player.getLocation());
-                        HealthBarEntity bar = new HealthBarEntity(player.getLocation(),ZombieSpawn);
-                        ((CraftWorld) player.getWorld()).getHandle().addEntity(bar,SpawnReason.COMMAND);
-                        ((CraftWorld) player.getWorld()).getHandle().addEntity(ZombieSpawn,SpawnReason.COMMAND);
-                    }
                     else if (args[0].equalsIgnoreCase("josephi")) {
+                        shouldParticle = true;
                         Josephi SkeletonSpawn = new Josephi(player.getLocation());
                         HealthBarEntity bar = new HealthBarEntity(player.getLocation(),SkeletonSpawn);
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(bar,SpawnReason.COMMAND);
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(SkeletonSpawn,SpawnReason.COMMAND);
                     } else if (args[0].equalsIgnoreCase("skeleton_master")) {
+                        shouldParticle = true;
                         SkeleMaster SkeletonSpawn = new SkeleMaster(player.getLocation());
                         HealthBarEntity bar = new HealthBarEntity(player.getLocation(),SkeletonSpawn);
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(bar,SpawnReason.COMMAND);
@@ -92,6 +101,9 @@ public class Spawn implements CommandExecutor {
                         new sphere(player.getLocation(),(double) 1);
                     } else {
                         player.sendMessage(ChatColor.YELLOW + "Mob does not exist.");
+                    }
+                    if (shouldParticle) {
+                        new sphere(player.getLocation(),(double) 1, (double) 2, (double) 1);
                     }
                 }
             } else {
