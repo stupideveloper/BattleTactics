@@ -28,15 +28,14 @@ public class sphere {
         double x;
         double y;
         double z;
+        double radians = Math.PI;
         x = loc.getX();
         y = loc.getY();
         z = loc.getZ();
         World world = loc.getWorld();
-        double angle1 = (rotationx * (360 / accuracy)) * radian;
-        double angle2 = (rotationz * (360 / accuracy)) * radian;
-        double finalx = x + radius * (Math.sin(angle1/2) * Math.cos(angle2));
-        double finaly = y + radius * (Math.sin(angle1/2) * Math.sin(angle2));
-        double finalz = z + radius * (Math.sin(angle1/2));
+        double finalx = x + radius * (radians * rotationx / accuracy) * Math.cos(2 * radians * rotationz / accuracy);
+        double finaly = y + radius * (radians * rotationx / accuracy) * Math.sin(2 * radians * rotationz / accuracy);
+        double finalz = z + radius * (radians * rotationx / accuracy);
         return new Location(world,finalx,finaly,finalz);
     }
 }
