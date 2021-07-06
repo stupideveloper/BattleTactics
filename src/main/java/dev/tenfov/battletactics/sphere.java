@@ -7,7 +7,6 @@ import xyz.xenondevs.particle.ParticleEffect;
 
 public class sphere {
     public sphere(Location loc, double radius) {
-        double radian = Math.PI / 180;
         double accuracy = 20;
         /**
          * x = x0 + sin (angle1/2) * cos angle2
@@ -25,17 +24,14 @@ public class sphere {
     // 360 / 20 = 18
     // 18 * 1 = 18
     public Location triangulateLocation(Location loc,double radius,double rotationx, double rotationz,double accuracy) {
-        double x;
-        double y;
-        double z;
         double radians = Math.PI;
-        x = loc.getX();
-        y = loc.getY();
-        z = loc.getZ();
+        double x = loc.getX();
+        double y = loc.getY();
+        double z = loc.getZ();
         World world = loc.getWorld();
-        double finalx = Math.sin(radians * rotationz / accuracy) * Math.cos(2 * radians * rotationx / accuracy);
-        double finaly = Math.sin(radians * rotationz / accuracy) * Math.sin(2 * radians * rotationx / accuracy);
-        double finalz = Math.sin(radians * rotationz / accuracy);
+        double finalx = x + radius * Math.sin(radians * rotationz / accuracy) * Math.cos(2 * radians * rotationx / accuracy);
+        double finaly = y + radius * Math.sin(radians * rotationz / accuracy) * Math.sin(2 * radians * rotationx / accuracy);
+        double finalz = z + radius * Math.sin(radians * rotationz / accuracy);
         return new Location(world,finalx,finaly,finalz);
     }
 }
