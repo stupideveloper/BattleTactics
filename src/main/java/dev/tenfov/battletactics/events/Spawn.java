@@ -83,7 +83,7 @@ public class Spawn implements CommandExecutor {
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(bar,SpawnReason.COMMAND);
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(SkeletonSpawn,SpawnReason.COMMAND);
                     } else if (args[0].equalsIgnoreCase("sphere_test")) {
-                        new sphere(player.getLocation(),(double) 4);
+                        new sphere(player.getLocation(),(double) 1);
                     } else {
                         player.sendMessage(ChatColor.YELLOW + "Mob does not exist.");
                     }
