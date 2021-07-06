@@ -22,6 +22,8 @@ public class sphere {
         }
     }
     // Sphere point calculation
+    // 360 / 20 = 18
+    // 18 * 1 = 18
     public Location triangulateLocation(Location loc,double radius,double rotationx, double rotationz,double accuracy,double radian) {
         double x;
         double y;
@@ -30,8 +32,8 @@ public class sphere {
         y = loc.getY();
         z = loc.getZ();
         World world = loc.getWorld();
-        double angle1 = (rotationx / (360 / accuracy)) * radian;
-        double angle2 = (rotationz / (360 / accuracy)) * radian;
+        double angle1 = (rotationx * (360 / accuracy)) * radian;
+        double angle2 = (rotationz * (360 / accuracy)) * radian;
         double finalx = x + radius * (Math.sin(angle1/2) * Math.cos(angle2));
         double finaly = y + radius * (Math.sin(angle1/2) * Math.sin(angle2));
         double finalz = z + radius * (Math.sin(angle1/2));
