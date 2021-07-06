@@ -37,7 +37,6 @@ public class sphere {
         double finalx = x + radius * (Math.sin(angle1/2) * Math.cos(angle2));
         double finaly = y + radius * (Math.sin(angle1/2) * Math.sin(angle2));
         double finalz = z + radius * (Math.sin(angle1/2));
-        System.out.println(finalx + "," + finaly + "," + finalz);
         return new Location(world,finalx,finaly,finalz);
     }
 }
