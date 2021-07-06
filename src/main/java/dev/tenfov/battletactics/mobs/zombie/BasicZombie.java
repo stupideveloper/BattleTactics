@@ -23,7 +23,7 @@ public class BasicZombie extends Zombie {
         super(EntityType.ZOMBIE,((CraftWorld) loc.getWorld()).getHandle());
         this.setPos(loc.getX(), loc.getY(), loc.getZ());
 
-        this.setCustomName(new TextComponent(ChatColor.BOLD + "" + ChatColor.RED + "| lvl 5 | " + ChatColor.GREEN + "Zombie "));
+        this.setCustomName(new TextComponent(ChatColor.BOLD + "" + ChatColor.RED + "| lvl 5  | " + ChatColor.GREEN + "Zombie "));
         this.setCustomNameVisible(true);
 
         // Equip Items

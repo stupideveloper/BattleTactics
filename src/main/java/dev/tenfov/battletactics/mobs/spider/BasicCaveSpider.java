@@ -24,7 +24,7 @@ public class BasicCaveSpider extends CaveSpider {
         super(EntityType.CAVE_SPIDER,((CraftWorld) loc.getWorld()).getHandle());
         this.setPos(loc.getX(), loc.getY(), loc.getZ());
 
-        this.setCustomName(new TextComponent(ChatColor.BOLD + "" + ChatColor.RED + "| lvl 11 |" + ChatColor.GREEN + "  Spider"));
+        this.setCustomName(new TextComponent(ChatColor.BOLD + "" + ChatColor.RED + "| lvl 11 |" + ChatColor.YELLOW + " Cave Spider"));
         this.setCustomNameVisible(true);
         this.setDropChance(EquipmentSlot.HEAD, 0);
 

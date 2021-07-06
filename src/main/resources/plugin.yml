@@ -1,8 +1,8 @@
-name: BTMobs
+name: BT
 version: ${project.version}
-main: dev.tenfov.battletactics.MobsBasic
+main: dev.tenfov.battletactics.Main
 api-version: 1.17
-prefix: Mobs Basic
+prefix: BattleTactics
 authors: [ 10Fov ]
 commands:
   mobspawn:
