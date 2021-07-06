@@ -21,7 +21,7 @@ public class UndeadZombie extends Zombie {
         super(EntityType.ZOMBIE,((CraftWorld) loc.getWorld()).getHandle());
         this.setPos(loc.getX(), loc.getY(), loc.getZ());
 
-        this.setCustomName(new TextComponent(ChatColor.BOLD + "" + ChatColor.RED + "The Undead"));
+        this.setCustomName(new TextComponent(ChatColor.BOLD + "" + ChatColor.RED + "|lvl 100|" + ChatColor.GREEN + " The Undead "));
         this.setCustomNameVisible(true);
 
         // Equip Items

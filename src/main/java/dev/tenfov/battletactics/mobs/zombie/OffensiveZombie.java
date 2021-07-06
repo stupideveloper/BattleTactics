@@ -21,7 +21,7 @@ public class OffensiveZombie extends Zombie {
         super(EntityType.ZOMBIE,((CraftWorld) loc.getWorld()).getHandle());
         this.setPos(loc.getX(), loc.getY(), loc.getZ());
 
-        this.setCustomName(new TextComponent(ChatColor.BOLD + "" + ChatColor.RED + "Offensive Zombie" + ChatColor.YELLOW + " lvl 50"));
+        this.setCustomName(new TextComponent(ChatColor.BOLD + "" + ChatColor.RED + "|lvl 50|" + ChatColor.GREEN + " Offensive Zombie "));
         this.setCustomNameVisible(true);
 
         // Equip Items

@@ -21,7 +21,7 @@ public class AdvancedZombie extends Zombie {
         super(EntityType.ZOMBIE,((CraftWorld) loc.getWorld()).getHandle());
         this.setPos(loc.getX(), loc.getY(), loc.getZ());
 
-        this.setCustomName(new TextComponent(ChatColor.BOLD + "" + ChatColor.RED + "Advanced Zombie" + ChatColor.YELLOW + " lvl 15"));
+        this.setCustomName(new TextComponent(ChatColor.BOLD + "" + ChatColor.RED + "|lvl 15|" + ChatColor.GREEN + " Advanced Zombie "));
         this.setCustomNameVisible(true);
 
         // Equip Items
