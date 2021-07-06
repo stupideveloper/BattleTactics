@@ -33,9 +33,9 @@ public class sphere {
         y = loc.getY();
         z = loc.getZ();
         World world = loc.getWorld();
-        double finalx = Math.sin(radians * rotationx / accuracy) * Math.cos(2 * radians * rotationz / accuracy);
-        double finaly = Math.sin(radians * rotationx / accuracy) * Math.sin(2 * radians * rotationz / accuracy);
-        double finalz = Math.sin(radians * rotationx / accuracy);
+        double finalx = Math.sin(radians * rotationz / accuracy) * Math.cos(2 * radians * rotationx / accuracy);
+        double finaly = Math.sin(radians * rotationz / accuracy) * Math.sin(2 * radians * rotationx / accuracy);
+        double finalz = Math.sin(radians * rotationz / accuracy);
         return new Location(world,finalx,finaly,finalz);
     }
 }
