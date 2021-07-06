@@ -16,12 +16,12 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.monster.Zombie;
 
 
-public class UndeadZombie extends Zombie {
-    public UndeadZombie(Location loc) {
+public class OffensiveZombie extends Zombie {
+    public OffensiveZombie(Location loc) {
         super(EntityType.ZOMBIE,((CraftWorld) loc.getWorld()).getHandle());
         this.setPos(loc.getX(), loc.getY(), loc.getZ());
 
-        this.setCustomName(new TextComponent(ChatColor.BOLD + "" + ChatColor.RED + "The Undead"));
+        this.setCustomName(new TextComponent(ChatColor.BOLD + "" + ChatColor.RED + "Offensive Zombie" + ChatColor.YELLOW + " lvl 50"));
         this.setCustomNameVisible(true);
 
         // Equip Items
@@ -32,9 +32,13 @@ public class UndeadZombie extends Zombie {
         armorHead.setItemMeta(armorHeadMeta);
 
         ItemStack swordHand = new ItemStack(Material.STONE_SWORD,1);
+        ItemStack leggings = new ItemStack(Material.CHAINMAIL_LEGGINGS,1);
+
 
         this.setItemSlot(EquipmentSlot.MAINHAND, CraftItemStack.asNMSCopy(swordHand));
         this.setItemSlot(EquipmentSlot.HEAD,CraftItemStack.asNMSCopy(armorHead));
+        this.setItemSlot(EquipmentSlot.LEGS,CraftItemStack.asNMSCopy(leggings));
+
         this.setDropChance(EquipmentSlot.HEAD, 0);
 
         this.goalSelector.removeAllGoals();
@@ -42,7 +46,8 @@ public class UndeadZombie extends Zombie {
         this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1D));
         this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
 
-        this.setAbsorptionAmount(80);
+        this.setHealth(10);
+        this.setAbsorptionAmount(5);
 
     }
 }

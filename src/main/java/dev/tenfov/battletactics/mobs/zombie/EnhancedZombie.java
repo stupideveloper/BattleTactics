@@ -19,24 +19,24 @@ public class EnhancedZombie extends Zombie {
         super(EntityType.ZOMBIE,((CraftWorld) loc.getWorld()).getHandle());
         this.setPos(loc.getX(), loc.getY(), loc.getZ());
 
-        this.setCustomName(new TextComponent(ChatColor.BOLD + "" + ChatColor.GREEN + "Enhanced Zombie"));
+        this.setCustomName(new TextComponent(ChatColor.BOLD + "" + ChatColor.GREEN + "Enhanced Zombie" + ChatColor.YELLOW + "lvl 10"));
         this.setCustomNameVisible(true);
 
         // Equip Items
-        ItemStack armorHead = new ItemStack(Material.CHAINMAIL_HELMET,1);
+        ItemStack armorChestplate = new ItemStack(Material.CHAINMAIL_CHESTPLATE,1);
 
         ItemStack swordHand = new ItemStack(Material.STONE_SWORD,1);
 
         this.setItemSlot(EquipmentSlot.MAINHAND, CraftItemStack.asNMSCopy(swordHand));
         this.setItemSlot(EquipmentSlot.OFFHAND, CraftItemStack.asNMSCopy(swordHand));
-        this.setItemSlot(EquipmentSlot.HEAD,CraftItemStack.asNMSCopy(armorHead));
+        this.setItemSlot(EquipmentSlot.CHEST,CraftItemStack.asNMSCopy(armorChestplate));
         this.setDropChance(EquipmentSlot.HEAD, 0);
 
         this.goalSelector.removeAllGoals();
         this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.3D, true));
         this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1D));
         this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
+        this.setHealth(10);
 
-        this.setAbsorptionAmount(6);
     }
 }

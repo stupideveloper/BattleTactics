@@ -24,17 +24,17 @@ public class CrypticZombie extends Zombie {
         super(EntityType.ZOMBIE,((CraftWorld) loc.getWorld()).getHandle());
         this.setPos(loc.getX(), loc.getY(), loc.getZ());
 
-        this.setCustomName(new TextComponent(ChatColor.BOLD + "" + ChatColor.DARK_PURPLE + "Cryptic Zombie"));
+        this.setCustomName(new TextComponent(ChatColor.BOLD + "" + ChatColor.DARK_PURPLE + "Cryptic Zombie" + ChatColor.YELLOW + " lvl 30"));
         this.setCustomNameVisible(true);
 
         // Equip Items
-        ItemStack armorHead = new ItemStack(Material.IRON_HELMET,1);
-        armorHead.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
+        ItemStack chestplate = new ItemStack(Material.DIAMOND_CHESTPLATE,1);
+        chestplate.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2);
 
         ItemStack swordHand = new ItemStack(Material.IRON_SWORD,1);
 
         this.setItemSlot(EquipmentSlot.MAINHAND, CraftItemStack.asNMSCopy(swordHand));
-        this.setItemSlot(EquipmentSlot.HEAD,CraftItemStack.asNMSCopy(armorHead));
+        this.setItemSlot(EquipmentSlot.CHEST,CraftItemStack.asNMSCopy(chestplate));
         this.setDropChance(EquipmentSlot.HEAD, 0);
 
         this.goalSelector.removeAllGoals();
@@ -42,6 +42,6 @@ public class CrypticZombie extends Zombie {
         this.goalSelector.addGoal(2, new RandomStrollGoal(this, 0.8D));
         this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
 
-        this.setAbsorptionAmount(6);
+        this.setHealth(20);
     }
 }
