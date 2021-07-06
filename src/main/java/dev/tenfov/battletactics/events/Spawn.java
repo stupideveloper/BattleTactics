@@ -1,8 +1,11 @@
 package dev.tenfov.battletactics.events;
 
+import dev.tenfov.battletactics.mobs.skeleton.Josephi;
+import dev.tenfov.battletactics.mobs.skeleton.SkeleMaster;
+import dev.tenfov.battletactics.mobs.spider.BasicCaveSpider;
+import dev.tenfov.battletactics.mobs.spider.BasicSpider;
 import dev.tenfov.battletactics.sphere;
 import dev.tenfov.battletactics.mobs.healthbar.HealthBarEntity;
-import dev.tenfov.battletactics.mobs.skeleton.*;
 import dev.tenfov.battletactics.mobs.zombie.*;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -80,6 +83,7 @@ public class Spawn implements CommandExecutor {
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(ZombieSpawn,SpawnReason.COMMAND);
                     }
                     else if (args[0].equalsIgnoreCase("undead")) {
+                        shouldParticle = true;
                         UndeadZombie ZombieSpawn = new UndeadZombie(player.getLocation());
                         HealthBarEntity bar = new HealthBarEntity(player.getLocation(),ZombieSpawn);
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(bar,SpawnReason.COMMAND);
@@ -97,6 +101,21 @@ public class Spawn implements CommandExecutor {
                         HealthBarEntity bar = new HealthBarEntity(player.getLocation(),SkeletonSpawn);
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(bar,SpawnReason.COMMAND);
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(SkeletonSpawn,SpawnReason.COMMAND);
+
+                    } else if (args[0].equalsIgnoreCase("spider")) {
+                        shouldParticle = true;
+                        BasicSpider SpiderSpawn = new BasicSpider(player.getLocation());
+                        HealthBarEntity bar = new HealthBarEntity(player.getLocation(),SpiderSpawn);
+                        ((CraftWorld) player.getWorld()).getHandle().addEntity(bar,SpawnReason.COMMAND);
+                        ((CraftWorld) player.getWorld()).getHandle().addEntity(SpiderSpawn,SpawnReason.COMMAND);
+
+                    }  else if (args[0].equalsIgnoreCase("cave_spider")) {
+                        shouldParticle = true;
+                        BasicCaveSpider SpiderSpawn = new BasicCaveSpider(player.getLocation());
+                        HealthBarEntity bar = new HealthBarEntity(player.getLocation(),SpiderSpawn);
+                        ((CraftWorld) player.getWorld()).getHandle().addEntity(bar,SpawnReason.COMMAND);
+                        ((CraftWorld) player.getWorld()).getHandle().addEntity(SpiderSpawn,SpawnReason.COMMAND);
+
                     } else if (args[0].equalsIgnoreCase("sphere_test")) {
                         new sphere(player.getLocation(),(double) 1);
                     } else {

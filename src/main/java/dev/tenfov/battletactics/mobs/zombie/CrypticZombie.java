@@ -24,7 +24,7 @@ public class CrypticZombie extends Zombie {
         super(EntityType.ZOMBIE,((CraftWorld) loc.getWorld()).getHandle());
         this.setPos(loc.getX(), loc.getY(), loc.getZ());
 
-        this.setCustomName(new TextComponent(ChatColor.BOLD + "" + ChatColor.RED + "|lvl 30|" + ChatColor.GREEN + " Cryptic Zombie "));
+        this.setCustomName(new TextComponent(ChatColor.BOLD + "" + ChatColor.RED + "| lvl 30 |" + ChatColor.GREEN + " Cryptic Zombie "));
         this.setCustomNameVisible(true);
 
         // Equip Items
@@ -38,7 +38,7 @@ public class CrypticZombie extends Zombie {
         this.setDropChance(EquipmentSlot.HEAD, 0);
 
         this.goalSelector.removeAllGoals();
-        this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.6D, true));
+        this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.5D, true));
         this.goalSelector.addGoal(2, new RandomStrollGoal(this, 0.8D));
         this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
 

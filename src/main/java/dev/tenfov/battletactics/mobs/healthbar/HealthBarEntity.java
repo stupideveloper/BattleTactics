@@ -46,7 +46,7 @@ public class HealthBarEntity extends ArmorStand {
         try {
 
             // Sets the location to that of the parent entity
-            this.setPos(parent.getX(), parent.getY() + 1.25 + parentEntity.getEyeHeight() - 2, parent.getZ());
+            this.setPos(parent.getX(), parent.getY() + 1.5 + parentEntity.getEyeHeight() - 2, parent.getZ());
             
             // Calculates the health of the parent entity
             Float hea = (this.parentEntity.getHealth() + this.parentEntity.getAbsorptionAmount());

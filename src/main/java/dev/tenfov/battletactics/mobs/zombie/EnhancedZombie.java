@@ -19,7 +19,7 @@ public class EnhancedZombie extends Zombie {
         super(EntityType.ZOMBIE,((CraftWorld) loc.getWorld()).getHandle());
         this.setPos(loc.getX(), loc.getY(), loc.getZ());
 
-        this.setCustomName(new TextComponent(ChatColor.BOLD + "" + ChatColor.RED + "|lvl 10|" + ChatColor.GREEN + " Enhanced Zombie "));
+        this.setCustomName(new TextComponent(ChatColor.RED + "| lvl 10 | " + ChatColor.GREEN + " Enhanced Zombie "));
         this.setCustomNameVisible(true);
 
         // Equip Items
@@ -33,7 +33,7 @@ public class EnhancedZombie extends Zombie {
         this.setDropChance(EquipmentSlot.HEAD, 0);
 
         this.goalSelector.removeAllGoals();
-        this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.3D, true));
+        this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.6D, true));
         this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1D));
         this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
         this.setHealth(10);
