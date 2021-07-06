@@ -24,7 +24,7 @@ public class CrypticZombie extends Zombie {
         super(EntityType.ZOMBIE,((CraftWorld) loc.getWorld()).getHandle());
         this.setPos(loc.getX(), loc.getY(), loc.getZ());
 
-        this.setCustomName(new TextComponent(ChatColor.BOLD + "" + ChatColor.DARK_PURPLE + "Cryptic Zombie" + ChatColor.YELLOW + " lvl 30"));
+        this.setCustomName(new TextComponent(ChatColor.BOLD + "" + ChatColor.RED + "|lvl 30|" + ChatColor.GREEN + " Cryptic Zombie "));
         this.setCustomNameVisible(true);
 
         // Equip Items

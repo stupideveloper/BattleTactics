@@ -1,10 +1,10 @@
 ## Zombies
-- Zombie lvl5, Hp:20, Abs:0, Def:1, Atk:3. `Complete`
-- Enhanced Zombie lvl10, Hp:10, Abs:0, Def:5, Atk:5. `Complete`
-- Advanced Zombie lvl15, Hp:10, Abs:5, Def:5, Atk:5. `Complete`
-- Cryptic Zombie lvl30, Hp:20, Abs:0, Def:10, Atk:7. `Complete`
-- Offensive Zombie lvl50, Hp:25, Abs:10, Def:10, Atk:7. `In progress`
-- Undead lvl100, Hp:30, Abs:20, Def:0, Atk:8
+- Zombie lvl5, Hp:20, Abs:0, Def:1, Atk:3, Spd:0.7, Aspd:1, lookaround:0.7. `Complete`
+- Enhanced Zombie lvl10, Hp:10, Abs:0, Def:5, Atk:5, Spd:1, Aspd:2, lookaround:0.7. `Complete`
+- Advanced Zombie lvl15, Hp:10, Abs:5, Def:5, Atk:5, Spd:1.7, Aspd:4, lookaround:0.7. `Complete`
+- Cryptic Zombie lvl30, Hp:20, Abs:0, Def:10, Atk:7, Spd:2, Aspd:6, lookaround:0.7. `Complete`
+- Offensive Zombie lvl50, Hp:25, Abs:10, Def:10, Atk:7, Spd:4, Aspd:9, lookaround:0.7. `In progress`
+- Undead lvl100, Hp:30, Abs:20, Def:0, Atk:8, Spd:2, Aspd:2, lookaround:0.7.
 
 ## Spiders
 - Spider lvl8, Hp:8, Abs:4, Def:5, Atk:2.

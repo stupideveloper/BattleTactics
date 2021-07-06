@@ -23,7 +23,7 @@ public class BasicZombie extends Zombie {
         super(EntityType.ZOMBIE,((CraftWorld) loc.getWorld()).getHandle());
         this.setPos(loc.getX(), loc.getY(), loc.getZ());
 
-        this.setCustomName(new TextComponent(ChatColor.BOLD + "" + ChatColor.BLUE + "Zombie" + ChatColor.YELLOW + " lvl 5"));
+        this.setCustomName(new TextComponent(ChatColor.BOLD + "" + ChatColor.RED + "|lvl 5|" + ChatColor.GREEN + " Zombie "));
         this.setCustomNameVisible(true);
 
         // Equip Items
@@ -41,8 +41,8 @@ public class BasicZombie extends Zombie {
 
         this.goalSelector.removeAllGoals();
         this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1D, true));
-        this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1D));
-        this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
+        this.goalSelector.addGoal(2, new RandomStrollGoal(this, 0.7D));
+        this.goalSelector.addGoal(3, new RandomLookAroundGoal(this, 0.7D));
         this.setHealth(5);
     }
 }

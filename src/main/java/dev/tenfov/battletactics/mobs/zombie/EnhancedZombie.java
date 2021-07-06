@@ -19,7 +19,7 @@ public class EnhancedZombie extends Zombie {
         super(EntityType.ZOMBIE,((CraftWorld) loc.getWorld()).getHandle());
         this.setPos(loc.getX(), loc.getY(), loc.getZ());
 
-        this.setCustomName(new TextComponent(ChatColor.BOLD + "" + ChatColor.GREEN + "Enhanced Zombie" + ChatColor.YELLOW + "lvl 10"));
+        this.setCustomName(new TextComponent(ChatColor.BOLD + "" + ChatColor.RED + "|lvl 10|" + ChatColor.GREEN + " Enhanced Zombie "));
         this.setCustomNameVisible(true);
 
         // Equip Items
