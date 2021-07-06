@@ -24,7 +24,7 @@ public class HealthBarEntity extends ArmorStand {
         this.setInvisible(true);
         this.parent = parent;
         if (parent instanceof LivingEntity) {
-        this.parentEntity = (LivingEntity) parent;
+            this.parentEntity = (LivingEntity) parent;
         } else {
             this.remove(RemovalReason.DISCARDED);
         }
@@ -39,7 +39,7 @@ public class HealthBarEntity extends ArmorStand {
             this.errors = 0;
 
             // Temporary Fix
-            if (!parent.isAlive()) {
+            if (!parentEntity.isAlive()) {
                 this.remove(RemovalReason.KILLED);
             }
         } catch (NullPointerException e) {
