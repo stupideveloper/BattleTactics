@@ -21,7 +21,7 @@ public class AdvancedZombie extends Zombie {
         super(EntityType.ZOMBIE,((CraftWorld) loc.getWorld()).getHandle());
         this.setPos(loc.getX(), loc.getY(), loc.getZ());
 
-        this.setCustomName(new TextComponent(ChatColor.BOLD + "" + ChatColor.RED + "|lvl 15|" + ChatColor.GREEN + " Advanced Zombie "));
+        this.setCustomName(new TextComponent(ChatColor.RED + "| lvl 15 | " + ChatColor.GREEN + " Advanced Zombie "));
         this.setCustomNameVisible(true);
 
         // Equip Items
@@ -42,7 +42,7 @@ public class AdvancedZombie extends Zombie {
         this.setDropChance(EquipmentSlot.HEAD, 0);
 
         this.goalSelector.removeAllGoals();
-        this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.5D, true));
+        this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.4D, true));
         this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1D));
         this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
 
