@@ -11,7 +11,7 @@ public class sphere {
     public sphere(Location loc, double radius) {
         double accuracy = 20; 
         accuracy = 2 * Math.PI * radius;
-        accuracy = accuracy / 0.125;
+        accuracy = accuracy / 0.375;
         /**
          * x = x0 + sin (angle1/2) * cos angle2
          * y = y0 + sin (angle1/2) * sin angle2
@@ -28,7 +28,7 @@ public class sphere {
     }
     public sphere(Location loc, double xSize,double ySize,double zSize) {
         double accuracy = 20; 
-        accuracy = 2 * Math.PI * (xSize + ySize + zSize)/3;
+        accuracy = 2 * Math.PI * (xSize + ySize + zSize)/12;
         accuracy = accuracy / 0.125;
         /**
          * x = x0 + sin (angle1/2) * cos angle2
