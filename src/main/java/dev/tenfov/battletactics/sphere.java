@@ -32,9 +32,10 @@ public class sphere {
         World world = loc.getWorld();
         double angle1 = (rotationx / (360 / accuracy)) * radian;
         double angle2 = (rotationz / (360 / accuracy)) * radian;
-        double finalx = x + Math.sin(angle1/2) * Math.cos(angle2);
-        double finaly = y + Math.sin(angle1/2) * Math.sin(angle2);
-        double finalz = z + Math.sin(angle1/2);
+        double finalx = x + radius * (Math.sin(angle1/2) * Math.cos(angle2));
+        double finaly = y + radius * (Math.sin(angle1/2) * Math.sin(angle2));
+        double finalz = z + radius * (Math.sin(angle1/2));
+        System.out.println(finalx + "," + finaly + "," + finalz);
         return new Location(world,finalx,finaly,finalz);
     }
 }
