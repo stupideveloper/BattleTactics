@@ -20,12 +20,15 @@ public class HealthBarEntity extends ArmorStand {
     public HealthBarEntity(Location loc, Entity parent) {
         super(EntityType.ARMOR_STAND, ((CraftWorld) loc.getWorld()).getHandle());
         this.setPos(loc.getX(), loc.getY(), loc.getZ());
-        
+
         // Makes the ArmorStand unkillable
         this.setInvulnerable(true);
 
         // Makes the ArmorStand invisible
         this.setInvisible(true);
+
+        //Mkes the ArmorStand small
+        this.setSmall(true);
 
         // Sets the parent entity
         this.parent = parent;
@@ -43,8 +46,8 @@ public class HealthBarEntity extends ArmorStand {
         try {
 
             // Sets the location to that of the parent entity
-            this.setPos(parent.getX(), parent.getY() + 0.25, parent.getZ());
-
+            this.setPos(parent.getX(), parent.getY() + 1 + parentEntity.getEyeHeight() - 2, parent.getZ());
+            
             // Calculates the health of the parent entity
             Float hea = (this.parentEntity.getHealth() + this.parentEntity.getAbsorptionAmount());
 
