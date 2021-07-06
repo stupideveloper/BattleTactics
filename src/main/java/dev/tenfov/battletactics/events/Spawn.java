@@ -48,6 +48,12 @@ public class Spawn implements CommandExecutor {
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(bar,SpawnReason.COMMAND);
                         ((CraftWorld) player.getWorld()).getHandle().addEntity(ZombieSpawn,SpawnReason.COMMAND);
                     }
+                    else if (args[0].equalsIgnoreCase("undead")) {
+                        UndeadZombie ZombieSpawn = new UndeadZombie(player.getLocation());
+                        HealthBarEntity bar = new HealthBarEntity(player.getLocation(),ZombieSpawn);
+                        ((CraftWorld) player.getWorld()).getHandle().addEntity(bar,SpawnReason.COMMAND);
+                        ((CraftWorld) player.getWorld()).getHandle().addEntity(ZombieSpawn,SpawnReason.COMMAND);
+                    }
                     else if (args[0].equalsIgnoreCase("advanced_zombie")) {
                         AdvancedZombie ZombieSpawn = new AdvancedZombie(player.getLocation());
                         HealthBarEntity bar = new HealthBarEntity(player.getLocation(),ZombieSpawn);

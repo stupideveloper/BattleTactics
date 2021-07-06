@@ -14,9 +14,9 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.monster.Zombie;
 
-public class UndeadZombie extends Zombie {
+public class BaseZombie extends Zombie {
     private Float DesiredHealth;
-    public UndeadZombie(Location loc) {
+    public BaseZombie(Location loc) {
         super(EntityType.ZOMBIE,((CraftWorld) loc.getWorld()).getHandle());
         this.setPos(loc.getX(), loc.getY(), loc.getZ());
         /**
