@@ -22,6 +22,7 @@ public final class Main extends JavaPlugin implements Listener {
         this.getCommand("mobspawn").setExecutor(new Spawn());
         this.getCommand("mobspawn").setTabCompleter(new TabCompleteSpawn());
         this.getServer().getPluginManager().registerEvents(new JoinEvent(), this);
+        this.getServer().getPluginManager().registerEvents(this, this);
 
     }
     @Override

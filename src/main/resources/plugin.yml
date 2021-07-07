@@ -4,6 +4,8 @@ main: dev.tenfov.battletactics.Main
 api-version: 1.17
 prefix: BattleTactics
 authors: [ 10Fov ]
+depends:
+  - citizens
 commands:
   mobspawn:
     description: scary shit man
